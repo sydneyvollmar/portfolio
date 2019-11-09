@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" width="screen-width" initial-scale=1.0>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/html5_reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Amiri|Noto+Sans+KR&display=swap" rel="stylesheet">
+    <title>Contact Me</title>
+  </head>
+  <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <div class="container">
+      <div class="nav">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="contact.html" class="current-page">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1 id="contact-title">Contact Me</h1>
+      <form id="contact-form" onsubmit="return check1()">
+    		<fieldset>
+    		<legend>Let's chat!</legend>
+    		<label>Name:</label>
+        <br>
+        <input type="text" id="form_name" name="form_name" required><br>
+
+      	<label>Email address:</label>
+        <br>
+        <input type="email" id="email_addr" name="email_addr" required><br>
+
+    		<label>Note to me!</label>
+        <br>
+    		<input type = "text" id="form_note" required onchange="">
+    		<br>
+      	<input type = "submit" class="default-button">
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 32px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1 #about-title {
+  font-size: 20px;
+}
+
+h2 {
+  font-family: 'Amiri', serif;
+  font-size: 24px;
+  line-height: 1.0;
+  text-align: left;
+  font-weight: normal;
+}
+
+p {
+  font-family: 'Amiri', serif;
+  font-size: 20px;
+  line-height: 1.0;
+  text-align: left;
+  font-weight: normal;
+}
+
+nav a {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.current-page {
+  color: #0A8CBF;
+}
+
+h2.proj-name {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+  padding-right: 25px;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute; /* absolute position relative to the parent*/
+  top: -40px;    /*place 40px higher than margin */
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+:focus{
+  outline: 2px solid black; /* selector to put a 2px black border around all elements in focus.*/
+}
+
+.skip a:focus{
+  position: absolute; /* selector to move the skip link to the exact top.*/
+  top: 0px;
+}
+
+footer {
+  grid-column: 1 / -1;
+  grid-row: 7 / span 1;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+#footer-name {
+  grid-column: 2 / span 1;
+}
+
+/* rounding font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #0A8CBF;
+}
+
+.default-button {
+  background-color: #0A8CBF;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 15px 32px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ /* making button at bottom of about me change color with hover */
+input.contact-button:hover {
+color: #ffff00;
+background: #000;
+border: 1px solid #fff;
+}
+
+ /* adding container for grid */
+.container{
+  display: grid;
+
+  /* columns going across */
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+
+  /* rows going down */
+  grid-template-rows: 80px auto auto auto auto auto;
+  grid-row-gap: 50px;
+  width: 100vw;
+}
+
+/* to get paragraphs to center */
+.text-block{
+  align-self: center;
+}
+
+.nav {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 1;
+  text-align: center;
+}
+
+/* name and tagline */
+#main {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+}
+
+/* project tagline */
+#project-tagline {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+}
+
+/* internship project */
+#internship {
+  grid-column: 3 / span 1;
+  grid-row: 4 / span 1;
+}
+
+#proj-img-VZ {
+  max-height: 60%;
+  width: 60%;
+  padding: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+
+/* trusted travel project */
+#trusted-travel {
+  grid-column: 3 / span 1;
+  grid-row: 5 / span 1;
+}
+
+#proj-img-TT {
+  max-height: 60%;
+  width: 60%;
+  padding: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+}
+
+/* starting about me grid styling */
+#name {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+#prof-pic {
+  max-height: auto;
+  width: 80%;
+  padding: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+#about-block {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+}
+
+#contact-area {
+  grid-column: 3 / span 1;
+  grid-row: 4 / span 1;
+}
+
+/* start contact me page style */
+#contact-title {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+#contact-form {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+}
+
+input {
+  font-family: 'Amiri', serif;
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 0.5px solid #0A8CBF;
+}
+
+/* @media all and (max-width: 720px){
+  nav{
+    flex-direction: row;
+  }
+  main{
+    grid-template-columns: 1fr 1fr;
+  }
+} */
