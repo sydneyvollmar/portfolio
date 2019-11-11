@@ -83,13 +83,14 @@ nav li {
 
 footer {
   grid-column: 1 / -1;
-  grid-row: 7 / span 1;
+  grid-row: 8 / span 1;
   padding-top: 30px;
   padding-bottom: 70px;
   text-align: center;
 }
 
 #footer-name {
+  text-align: center;
   grid-column: 2 / span 1;
 }
 
@@ -111,7 +112,7 @@ footer {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  padding: 15px 32px;
+  padding: auto auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -130,7 +131,7 @@ border: 1px solid #fff;
   grid-template-columns: 1fr 3fr 3fr 1fr;
 
   /* rows going down */
-  grid-template-rows: 80px auto auto auto auto auto;
+  grid-template-rows: 80px auto auto auto auto auto auto;
   grid-row-gap: 50px;
   width: 100vw;
 }
@@ -226,7 +227,7 @@ border: 1px solid #fff;
 
 #contact-form {
   grid-column: 2 / span 2;
-  grid-row: 3 / span 1;
+  grid-row: 4 / span 1;
 }
 
 input {
@@ -237,6 +238,125 @@ input {
   box-sizing: border-box;
   border: 0.5px solid #0A8CBF;
 }
+
+/* start internship page style */
+#internship-title {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  text-align: center;
+}
+
+#intern-descr {
+  text-align: center;
+}
+
+.descr {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+}
+
+#proj-page-img {
+  max-height: 80%;
+  width: 80%;
+  padding: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.intern-takeaways {
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 1;
+}
+
+#more-coming {
+  grid-column: 2 / span 2;
+  grid-row: 5 / span 1;
+  text-align: center;
+}
+
+#more-coming-proj {
+  grid-column: 2 / span 2;
+  grid-row: 6 / span 1;
+  text-align: center;
+}
+
+#next-proj {
+  grid-column: 3 / span 2;
+  grid-row: 6 / span 1;
+}
+
+#prev-proj {
+  grid-column: 2 / span 2;
+  grid-row: 7 / span 1;
+}
+
+/* CSS generated animation */
+.animated {
+            background-repeat: no-repeat;
+            animation-duration: 1.5s;
+            animation-fill-mode: both;
+         }
+
+ @keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+ .fadeInLeft {
+ -webkit-animation-name: fadeInLeft;
+ animation-name: fadeInLeft;
+ }
+
+/* image gallery style */
+div #main-img-gallery {
+  grid-column: 2 / span 2;
+  grid-row: 5 / span 1;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/* parallax image */
+.parallax {
+  background-image: url("../images/hello.jpg");
+
+  background-attachment: fixed; /* parallax effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 400px;
+
+  grid-column: 1 / -1;
+  grid-row: 3 / span 1;
+}
+
 
 /* @media all and (max-width: 720px){
   nav{

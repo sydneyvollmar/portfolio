@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151959930-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-151959930-1');
+    </script>
+    
     <meta charset="utf-8">
     <meta name="viewpoint" width="screen-width" initial-scale=1.0>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/html5_reset.css">
     <link rel="stylesheet" href="css/style.css">
+
     <link href="https://fonts.googleapis.com/css?family=Amiri|Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Contact Me</title>
   </head>
   <body>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <div class="skip"><a href="#contact-form">Skip to Main Content</a></div>
     <div class="container">
       <div class="nav">
         <nav>
@@ -22,7 +34,10 @@
         </nav>
       </div>
       <h1 id="contact-title">Contact Me</h1>
-      <form id="contact-form" onsubmit="return check1()">
+
+      <div class="parallax"></div>
+
+      <form id="contact-form" onsubmit="return check1()" action="https://formspree.io/moqqeowz" method="POST">
     		<fieldset>
     		<legend>Let's chat!</legend>
     		<label>Name:</label>
@@ -35,10 +50,16 @@
 
     		<label>Note to me!</label>
         <br>
-    		<input type = "text" id="form_note" required onchange="">
+    		<input type = "text" id="form_note" name="form_message" required onchange="">
     		<br>
       	<input type = "submit" class="default-button">
       </form>
+      <footer>
+        <!-- font awesome icons -->
+        <a href="https://github.com/sydneyvollmar"><i class="fa fa-github fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/sydney-vollmar/"><i class="fa fa-linkedin fa-2x"></i></a>
+        <p id="footer-name">&copy; Sydney Vollmar 2019</p>
+      </footer>
     </div>
   </body>
 </html>

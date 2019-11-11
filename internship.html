@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151959930-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-151959930-1');
+    </script>
+    
     <meta charset="utf-8">
     <meta name="viewpoint" width="screen-width" initial-scale=1.0>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/html5_reset.css">
     <link rel="stylesheet" href="css/style.css">
+
     <link href="https://fonts.googleapis.com/css?family=Amiri|Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title></title>
   </head>
   <body>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <div class="nav">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="aboutme.html">About Me</a></li>
-          <li><a href="contact.html">Contact Me</a></li>
-        </ul>
-      </nav>
+    <div class="skip"><a href="#internship-title">Skip to Main Content</a></div>
+    <div class="container">
+      <div class="nav">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="internship-title">
+        <h1 class = "animated fadeInLeft">Verizon</h1>
+        <h2 id="intern-descr">UX Design / Front-End Development</h2>
+      </div>
+      <div class="descr">
+        <h3>My Internship</h3>
+        <p>
+        I designed and developed a new mobile application for Verizon Partner Solutions within 10 weeks. On a team of 2 other interns, I served as the UX specialist, leading the UX research and design process.
+        <br><br>
+        After completing the final digital prototype, I contributed to front-end development and testing. This project strengthened my research, visual design, and front-end development skills.
+        <br><br>
+        Timeline: Summer 2019, 10 weeks <br><br>
+        My Role: UX Design & Development Intern <br><br>
+        My Department: Verizon Partner Solutions
+        </p>
+      </div>
+      <img id="proj-page-img" src="images/verizon.png" alt="Verizon Internshp App Screens"/>
+      <div class="intern-takeaways">
+        <h3>My Takeaways</h3>
+        <p>
+        Throughout my internship, I gained confidence in my background in UX. My success leading real-world research and design sessions while keeping up with 2 software engineers on front-end development showed me the value in my unique design and coding background.
+        <br><br>
+        I also learned the importance of incorporating updated technology into every industry. While other areas of Verizon launched huge endeavors like 5G, the telecommunications wholesale industry took a huge step towards improving their customer experience by creating a mobile application.
+        <br><br>
+        My summer at Verizon gave me inspiration to continue pursuing a career where I can help my company pursue the next big thing by creating solutions to help users in their everyday lives.
+        </p>
+      </div>
+      <h2 id="more-coming">More details coming soon!</h2>
+      <div id="next-proj">
+        <form>
+          <input class="default-button" type="button" value="Next Project: Trusted Travel >" onclick="window.location.href='project.html'" />
+        </form>
+      </div>
+      <footer>
+        <!-- font awesome icons -->
+        <a href="https://github.com/sydneyvollmar"><i class="fa fa-github fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/sydney-vollmar/"><i class="fa fa-linkedin fa-2x"></i></a>
+        <p id="footer-name">&copy; Sydney Vollmar 2019</p>
+      </footer>
     </div>
   </body>
 </html>
