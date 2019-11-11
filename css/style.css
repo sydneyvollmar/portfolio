@@ -38,11 +38,8 @@ nav a {
   font-family: 'Noto Sans KR', sans-serif;
   color: black;
   text-decoration: none;
-}
-
-/* hide redundant menu from screen readers */
-nav select {
-  display: none;
+  display: block;
+  font-size: 40px;
 }
 
 nav a:hover {
@@ -59,11 +56,21 @@ h2.proj-name {
 
 nav ul {
   list-style-type: none;
+  justify-content: center;
+}
+
+.nav{
+  width: 100%;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  padding-top: 100px;
+  padding-left: none;
 }
 
 nav li {
-  display: inline;
-  padding-right: 25px;
+  display: block;
+  width: 100%;
+  justify-content: center;
 }
 
 .skip a{
@@ -86,19 +93,6 @@ nav li {
   top: 0px;
 }
 
-footer {
-  grid-column: 1 / -1;
-  grid-row: 8 / span 1;
-  padding-top: 30px;
-  padding-bottom: 70px;
-  text-align: center;
-}
-
-#footer-name {
-  text-align: center;
-  grid-column: 2 / span 1;
-}
-
 /* rounding font awesome icons */
 .fa {
   padding: 20px;
@@ -115,61 +109,62 @@ footer {
   color: #FFFFFF;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  display: block;
+  font-size: 40px;
   padding: auto auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
- /* making button at bottom of about me change color with hover */
-input.contact-button:hover {
-color: #ffff00;
-background: #000;
-border: 1px solid #fff;
-}
-
- /* adding container for grid */
+/* mobile grid */
 .container{
   display: grid;
 
   /* columns going across */
-  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-columns: 1fr 6fr 1fr;
 
   /* rows going down */
-  grid-template-rows: 80px auto auto auto auto auto auto;
-  grid-row-gap: 50px;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto;
+  grid-row-gap: 60px;
   width: 100vw;
 }
 
-/* to get paragraphs to center */
-.text-block{
-  align-self: center;
-}
-
-.nav {
-  padding-top: 10px;
-  padding-bottom: 20px;
-  grid-column: 3 / span 2;
-  grid-row: 1 / span 1;
-  text-align: center;
-}
 
 /* name and tagline */
 #main {
-  grid-column: 2 / span 2;
+  grid-column: 2 / span 1;
   grid-row: 2 / span 1;
 }
 
 /* project tagline */
 #project-tagline {
-  grid-column: 2 / span 2;
+  grid-column: 2 / span 1;
   grid-row: 3 / span 1;
 }
 
 /* internship project */
 #internship {
-  grid-column: 3 / span 1;
-  grid-row: 4 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+
+}
+
+/* trusted travel project */
+#trusted-travel {
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 1;
+
+}
+
+footer {
+  grid-column: 2 / span 1;
+  grid-row: 8 / span 1;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+#footer-name {
+  text-align: center;
+
 }
 
 #proj-img-VZ {
@@ -182,12 +177,6 @@ border: 1px solid #fff;
   grid-row: 4 / span 1;
 }
 
-/* trusted travel project */
-#trusted-travel {
-  grid-column: 3 / span 1;
-  grid-row: 5 / span 1;
-}
-
 #proj-img-TT {
   max-height: 60%;
   width: 60%;
@@ -195,7 +184,7 @@ border: 1px solid #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   grid-column: 2 / span 1;
-  grid-row: 5 / span 1;
+  grid-row: 6 / span 1;
 }
 
 /* starting about me grid styling */
@@ -214,14 +203,19 @@ border: 1px solid #fff;
   grid-row: 3 / span 1;
 }
 
+#contact-title {
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+
 #about-block {
-  grid-column: 3 / span 1;
-  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
 }
 
 #contact-area {
-  grid-column: 3 / span 1;
-  grid-row: 4 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
 }
 
 /* start contact me page style */
@@ -231,13 +225,15 @@ border: 1px solid #fff;
 }
 
 #contact-form {
-  grid-column: 2 / span 2;
-  grid-row: 4 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  font-size: 40px;
 }
 
 input {
   font-family: 'Amiri', serif;
-  width: 40%;
+  font-size: 40px;
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -246,7 +242,7 @@ input {
 
 /* start internship page style */
 #internship-title {
-  grid-column: 2 / span 2;
+  grid-column: 2 / span 1;
   grid-row: 2 / span 1;
   text-align: center;
 }
@@ -256,7 +252,7 @@ input {
 }
 
 .descr {
-  grid-column: 3 / span 1;
+  grid-column: 2 / span 1;
   grid-row: 3 / span 1;
 }
 
@@ -267,63 +263,41 @@ input {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
-}
-
-.intern-takeaways {
-  grid-column: 2 / span 2;
   grid-row: 4 / span 1;
 }
 
-#more-coming {
-  grid-column: 2 / span 2;
+.intern-takeaways {
+  grid-column: 2 / span 1;
   grid-row: 5 / span 1;
+}
+
+#more-coming {
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
   text-align: center;
 }
 
 #more-coming-proj {
-  grid-column: 2 / span 2;
+  grid-column: 2 / span 1;
   grid-row: 6 / span 1;
   text-align: center;
 }
 
 #next-proj {
-  grid-column: 3 / span 2;
-  grid-row: 6 / span 1;
-}
-
-#prev-proj {
-  grid-column: 2 / span 2;
+  grid-column: 2 / span 1;
   grid-row: 7 / span 1;
 }
 
-/* CSS generated animation */
-.animated {
-            background-repeat: no-repeat;
-            animation-duration: 1.5s;
-            animation-fill-mode: both;
-         }
-
- @keyframes fadeInLeft {
-    0% {
-       opacity: 0;
-       transform: translateX(-20px);
-    }
-    100% {
-       opacity: 1;
-       transform: translateX(0);
-    }
- }
-
- .fadeInLeft {
- -webkit-animation-name: fadeInLeft;
- animation-name: fadeInLeft;
- }
+#prev-proj {
+  grid-column: 2 / span 1;
+  grid-row: 8 / span 1;
+}
 
 /* image gallery style */
 div #main-img-gallery {
-  grid-column: 2 / span 2;
-  grid-row: 5 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 1;
+  justify-content: center;
 }
 
 div.gallery {
@@ -331,10 +305,6 @@ div.gallery {
   border: 1px solid #ccc;
   float: left;
   width: 180px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
 }
 
 div.gallery img {
@@ -347,35 +317,320 @@ div.desc {
   text-align: center;
 }
 
-/* parallax image */
-.parallax {
-  background-image: url("../images/hello.jpg");
-
-  background-attachment: fixed; /* parallax effect */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  height: 400px;
-
-  grid-column: 1 / -1;
-  grid-row: 3 / span 1;
+#proj-footer {
+  grid-column: 2 / span 1;
+  grid-row: 9 / span 1;
 }
 
-/* mad width for iPhoneX */
-@media (max-width: 920px){
-  nav li {
-    display: none;
+/* FOR DESKTOP VIEW */
+/*
+
+
+
+
+
+
+
+
+
+
+
+ */
+
+@media screen and (min-width: 1000px) {
+
+  nav li a {
+    /* display: block;
+    padding: 8px; */
+    text-align: center;
   }
-  nav select {
+
+  nav li {
+    display: inline;
+    padding-right: 25px;
+  }
+
+  footer {
+    grid-column: 1 / -1;
+    grid-row: 8 / span 1;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    text-align: center;
+  }
+
+  #footer-name {
+    text-align: center;
+    grid-column: 2 / span 1;
+  }
+
+
+  .default-button {
     display: inline-block;
   }
+
+   /* making button at bottom of about me change color with hover */
+  input.default-button:hover {
+  color: #ffffff;
+  background: #066A91;
+  }
+
+   /* adding container for grid */
+  .container{
+    display: grid;
+
+    /* columns going across */
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+
+    /* rows going down */
+    grid-template-rows: 80px auto auto auto auto auto auto;
+    grid-row-gap: 50px;
+    width: 100vw;
+  }
+
+  /* to get paragraphs to center */
+  .text-block{
+    align-self: center;
+  }
+
+  .nav {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 1;
+    text-align: center;
+    display: inline-block;
+    /* position: relative; */
+  }
+
+  /* name and tagline */
+  #main {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+  }
+
+  /* project tagline */
+  #project-tagline {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  /* internship project */
+  #internship {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  #proj-img-VZ {
+    max-height: 60%;
+    width: 60%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  /* trusted travel project */
+  #trusted-travel {
+    grid-column: 3 / span 1;
+    grid-row: 5 / span 1;
+  }
+
+  #proj-img-TT {
+    max-height: 60%;
+    width: 60%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+  }
+
+  /* starting about me grid styling */
+  #name {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  #prof-pic {
+    max-height: auto;
+    width: 80%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  #about-block {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  #contact-area {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  /* start contact me page style */
+  #contact-title {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  #contact-form {
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+  }
+
+  input {
+    font-family: 'Amiri', serif;
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 0.5px solid #0A8CBF;
+  }
+
+  /* start internship page style */
+  #internship-title {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    text-align: center;
+  }
+
+  #intern-descr {
+    text-align: center;
+  }
+
+  .descr {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  #proj-page-img {
+    max-height: 80%;
+    width: 80%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  .intern-takeaways {
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+  }
+
+  #more-coming {
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
+    text-align: center;
+  }
+
+  #more-coming-proj {
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 1;
+    text-align: center;
+  }
+
+  #next-proj {
+    grid-column: 3 / span 2;
+    grid-row: 6 / span 1;
+  }
+
+  #prev-proj {
+    grid-column: 2 / span 2;
+    grid-row: 7 / span 1;
+  }
+
+  /* CSS generated animation */
+  .animated {
+              background-repeat: no-repeat;
+              animation-duration: 1.5s;
+              animation-fill-mode: both;
+           }
+
+   @keyframes fadeInLeft {
+      0% {
+         opacity: 0;
+         transform: translateX(-20px);
+      }
+      100% {
+         opacity: 1;
+         transform: translateX(0);
+      }
+   }
+
+   .fadeInLeft {
+   -webkit-animation-name: fadeInLeft;
+   animation-name: fadeInLeft;
+   }
+
+  /* image gallery style */
+  div #main-img-gallery {
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
+  }
+
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+
+  /* parallax image */
+  .parallax {
+    background-image: url("../images/hello.jpg");
+
+    background-attachment: fixed; /* parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 400px;
+
+    grid-column: 1 / -1;
+    grid-row: 3 / span 1;
+  }
+}
+
+/* max width for mobile view */
+/* @media screen and (min-width: 320px) and (max-width: 632px){
+  .nav{
+    width: 100%;
+  }
+
+  nav li {
+    float: none;
+    width: 100%
+  } */
+  /* nav select {
+    display: inline-block;
+  } */
 }
 
 /* max width for iPad */
-@media (max-width: 1120px) {
+/* @media (max-width: 1120px) {
 
-}
+} */
 
 
 @media screen and (prefers-reduced-motion: reduce){
