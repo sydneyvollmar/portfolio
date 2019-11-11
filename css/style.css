@@ -40,6 +40,11 @@ nav a {
   text-decoration: none;
 }
 
+/* hide redundant menu from screen readers */
+nav select {
+  display: none;
+}
+
 nav a:hover {
   text-decoration: underline;
 }
@@ -357,12 +362,39 @@ div.desc {
   grid-row: 3 / span 1;
 }
 
+/* mad width for iPhoneX */
+@media (max-width: 920px){
+  nav li {
+    display: none;
+  }
+  nav select {
+    display: inline-block;
+  }
+}
 
-/* @media all and (max-width: 720px){
-  nav{
-    flex-direction: row;
+/* max width for iPad */
+@media (max-width: 1120px) {
+
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* removes scroll animation */
   }
-  main{
-    grid-template-columns: 1fr 1fr;
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none;
+    transition: none;
+    z-index: 1;
   }
-} */
+
+  .skip a:focus{
+    top:0;
+  }
+}
