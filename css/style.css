@@ -106,7 +106,7 @@ nav li {
 }
 
 .default-button {
-  background-color: #0A8CBF;
+  background-color: #115F7D;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -679,6 +679,7 @@ div.desc {
   input.default-button:hover {
   color: #ffffff;
   background: #066A91;
+
   }
 
    /* adding container for grid */
