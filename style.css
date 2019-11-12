@@ -1,0 +1,920 @@
+html {
+    scroll-behavior: smooth;
+    height: 100%
+}
+
+body {
+  background-color: #FFFFFF;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1 {
+  font-size: 32px;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding-bottom: 20px;
+}
+
+h1 #about-title {
+  font-size: 20px;
+}
+
+h2 {
+  font-family: 'Amiri', serif;
+  font-size: 24px;
+  line-height: 1.0;
+  text-align: left;
+  font-weight: normal;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-weight: bold;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+p {
+  font-family: 'Amiri', serif;
+  font-size: 20px;
+  line-height: 1.25;
+  text-align: left;
+  font-weight: normal;
+}
+
+nav a {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: black;
+  text-decoration: none;
+  /* display: block; */
+  line-height: 1.5;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.current-page {
+  color: #115F7D;
+}
+
+h2.proj-name {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.nav{
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  padding-top: 30px;
+}
+
+nav li {
+  text-align: center;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute; /* absolute position relative to the parent*/
+  top: -40px;    /*place 40px higher than margin */
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+:focus{
+  outline: 2px solid black; /* selector to put a 2px black border around all elements in focus.*/
+}
+
+.skip a:focus{
+  position: absolute; /* selector to move the skip link to the exact top.*/
+  top: 0px;
+}
+
+/* rounding font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #0A8CBF;
+}
+
+.default-button {
+  background-color: #0A8CBF;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: auto;
+  padding: auto auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.home-proj-button {
+  width: 50%;
+}
+
+.about-cont-button {
+  width: 100%;
+}
+
+/* mobile grid */
+.container{
+  display: grid;
+
+  /* columns going across */
+  grid-template-columns: 1fr 6fr 1fr;
+
+  /* rows going down */
+  grid-template-rows: auto auto auto auto auto auto auto auto auto;
+  grid-row-gap: 60px;
+  width: 100vw;
+}
+
+
+/* name and tagline */
+#main {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+/* project tagline */
+#project-tagline {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+/* internship project */
+#internship {
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+
+}
+
+/* trusted travel project */
+#trusted-travel {
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 1;
+
+}
+
+footer {
+  grid-column: 2 / span 1;
+  grid-row: 8 / span 1;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+#footer-name {
+  text-align: center;
+
+}
+
+#proj-img-VZ {
+  max-height: 60%;
+  width: 60%;
+  padding: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+
+#proj-img-TT {
+  max-height: 60%;
+  width: 60%;
+  padding: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
+}
+
+/* starting about me grid styling */
+#name {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+#prof-pic {
+  max-height: auto;
+  width: 80%;
+  padding: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+#contact-title {
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+
+#about-block {
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+}
+
+#contact-area {
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
+}
+
+/* start contact me page style */
+#contact-title {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+#contact-form {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  font-size: 20px;
+}
+
+form legend {
+  padding-bottom: 50px;
+}
+
+input {
+  font-family: 'Amiri', serif;
+  font-size: 20px;
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 0.5px solid #0A8CBF;
+}
+
+/* start internship page style */
+#internship-title {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  text-align: center;
+}
+
+#intern-descr {
+  text-align: center;
+}
+
+.descr {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+#proj-page-img {
+  max-height: 80%;
+  width: 80%;
+  padding: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+
+.intern-takeaways {
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+}
+
+#more-coming {
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
+  text-align: center;
+}
+
+#more-coming-proj {
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
+  text-align: center;
+}
+
+#next-proj {
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 1;
+}
+
+#prev-proj {
+  grid-column: 2 / span 1;
+  grid-row: 8 / span 1;
+}
+
+/* image gallery style */
+div #main-img-gallery {
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 1;
+  justify-content: center;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+#proj-footer {
+  grid-column: 2 / span 1;
+  grid-row: 9 / span 1;
+}
+
+.hit-the-floor {
+  display: none;
+}
+
+/* FOR TABLET VIEW */
+/*
+
+
+
+
+
+
+
+
+
+
+
+ */
+
+@media screen and (min-width: 700px) {
+
+  .container{
+    display: grid;
+
+    /* columns going across */
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+
+    /* rows going down */
+    grid-template-rows: 80px auto auto auto auto auto auto;
+    grid-row-gap: 50px;
+    width: 100vw;
+  }
+
+  nav li {
+    display: inline;
+    padding-right: 25px;
+  }
+
+  .nav {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 1;
+    text-align: center;
+    display: inline;
+  }
+
+  footer {
+    grid-column: 2 / span 2;
+    grid-row: 9 / span 1;
+  }
+
+  /* name and tagline */
+  #main {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+  }
+
+  /* project tagline */
+  #project-tagline {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  /* internship project */
+  #internship {
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+  }
+
+  #proj-img-VZ {
+    max-height: 60%;
+    width: 60%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  /* trusted travel project */
+  #trusted-travel {
+    grid-column: 3 / span 1;
+    grid-row: 5 / span 1;
+  }
+
+  #proj-img-TT {
+    max-height: 60%;
+    width: 60%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  /* starting about me grid styling */
+  #name {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  #prof-pic {
+    max-height: auto;
+    width: 60%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  #about-block {
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+  }
+
+  #contact-area {
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+  }
+
+  /* start contact me page style */
+  #contact-title {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  #contact-form {
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+  }
+
+  input {
+    font-family: 'Amiri', serif;
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 0.5px solid #0A8CBF;
+  }
+
+  /* start internship page style */
+  #internship-title {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    text-align: center;
+  }
+
+  #intern-descr {
+    text-align: center;
+  }
+
+  .descr {
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+  }
+
+  #proj-page-img {
+    max-height: 30%;
+    width: 30%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+
+    justify-content: center;
+  }
+
+  .intern-takeaways {
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
+  }
+
+  #more-coming {
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 1;
+    text-align: center;
+  }
+
+  #more-coming-proj {
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 1;
+    text-align: center;
+  }
+
+  #next-proj {
+    grid-column: 3 / span 1;
+    grid-row: 7 / span 1;
+  }
+
+  #prev-proj {
+    grid-column: 2 / span 1;
+    grid-row: 8 / span 1;
+  }
+
+  /* image gallery style */
+  div #main-img-gallery {
+    grid-column: 2 / span 2;
+    grid-row: 7 / span 1;
+  }
+
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+  #proj-footer {
+    grid-column: 2 / span 2;
+    grid-row: 9 / span 1;
+  }
+
+  /* CSS generated animation */
+  .animated {
+              background-repeat: no-repeat;
+              animation-duration: 1.5s;
+              animation-fill-mode: both;
+           }
+
+   @keyframes fadeInLeft {
+      0% {
+         opacity: 0;
+         transform: translateX(-20px);
+      }
+      100% {
+         opacity: 1;
+         transform: translateX(0);
+      }
+   }
+
+   .fadeInLeft {
+   -webkit-animation-name: fadeInLeft;
+   animation-name: fadeInLeft;
+   }
+
+   #text-effect {
+     grid-column: 2 / span 2;
+     grid-row: 3 / span 1;
+   }
+
+   #effect-header {
+     font-size: 40px;
+     padding-bottom: 15px;
+   }
+
+  .hit-the-floor {
+    display: inline-block;
+    color: #0A8CBF;
+    font-size: 12em;
+    font-weight: bold;
+    font-family: Helvetica;
+    text-shadow:
+      0 1px 0 #ccc,
+      0 2px 0 #c9c9c9,
+      0 3px 0 #bbb,
+      0 4px 0 #b9b9b9,
+      0 5px 0 #aaa,
+      0 6px 1px rgba(0,0,0,.1),
+      0 0 5px rgba(0,0,0,.1),
+      0 1px 3px rgba(0,0,0,.3),
+      0 3px 5px rgba(0,0,0,.2),
+      0 5px 10px rgba(0,0,0,.25),
+      0 10px 10px rgba(0,0,0,.2),
+      0 20px 20px rgba(0,0,0,.15);
+}
+
+  .hit-the-floor {
+    text-align: center;
+  }
+
+}
+
+
+/* FOR DESKTOP VIEW */
+/*
+
+
+
+
+
+
+
+
+
+
+
+ */
+
+@media screen and (min-width: 1200px) {
+
+
+  nav li {
+    display: inline;
+    padding-right: 25px;
+  }
+
+  .nav {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 1;
+    text-align: center;
+    display: inline;
+    /* position: relative; */
+  }
+
+  footer {
+    grid-column: 1 / -1;
+    grid-row: 8 / span 1;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    text-align: center;
+  }
+
+  #footer-name {
+    text-align: center;
+    grid-column: 2 / span 1;
+  }
+
+
+  .default-button {
+    display: inline-block;
+  }
+
+   /* making button at bottom of about me change color with hover */
+  input.default-button:hover {
+  color: #ffffff;
+  background: #066A91;
+  }
+
+   /* adding container for grid */
+  .container{
+    display: grid;
+
+    /* columns going across */
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+
+    /* rows going down */
+    grid-template-rows: 80px auto auto auto auto auto auto;
+    grid-row-gap: 50px;
+    width: 100vw;
+  }
+
+  /* to get paragraphs to center */
+  .text-block{
+    align-self: center;
+  }
+
+  /* name and tagline */
+  #main {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+  }
+
+  /* project tagline */
+  #project-tagline {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  /* internship project */
+  #internship {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  #proj-img-VZ {
+    max-height: 60%;
+    width: 60%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  /* trusted travel project */
+  #trusted-travel {
+    grid-column: 3 / span 1;
+    grid-row: 5 / span 1;
+  }
+
+  #proj-img-TT {
+    max-height: 60%;
+    width: 60%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+  }
+
+  /* starting about me grid styling */
+  #name {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  #prof-pic {
+    max-height: auto;
+    width: 80%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  #about-block {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  #text-effect {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  #effect-header {
+    font-size: 55px;
+    padding-top: 150px;
+  }
+
+  #contact-area {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  /* start contact me page style */
+  #contact-title {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  #contact-form {
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+  }
+
+  input {
+    font-family: 'Amiri', serif;
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 0.5px solid #0A8CBF;
+  }
+
+  /* start internship page style */
+  #internship-title {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 1;
+    text-align: center;
+  }
+
+  #intern-descr {
+    text-align: center;
+  }
+
+  .descr {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  #proj-page-img {
+    max-height: 80%;
+    width: 80%;
+    padding: 10px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  .intern-takeaways {
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+  }
+
+  #more-coming {
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
+    text-align: center;
+  }
+
+  #more-coming-proj {
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 1;
+    text-align: center;
+  }
+
+  #next-proj {
+    grid-column: 3 / span 2;
+    grid-row: 6 / span 1;
+  }
+
+  #prev-proj {
+    grid-column: 2 / span 2;
+    grid-row: 7 / span 1;
+  }
+
+  /* image gallery style */
+  div #main-img-gallery {
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
+  }
+
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+
+  /* parallax image */
+  .parallax {
+    background-image: url("../images/hello.jpg");
+
+    background-attachment: fixed; /* parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 400px;
+
+    grid-column: 1 / -1;
+    grid-row: 3 / span 1;
+  }
+}
+
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none;
+    transition: none;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}
