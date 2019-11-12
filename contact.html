@@ -36,7 +36,7 @@
       <h1 id="contact-title">Contact Me</h1>
 
       <div class="hit-the-floor" id="text-effect">
-        <h3 id="effect-header">Let's chat!</h3>
+        <h2 id="effect-header">Let's chat!</h2>
       </div>
 
       <div class="parallax"></div>
@@ -44,19 +44,19 @@
         <form onsubmit="return check1()" action="https://formspree.io/moqqeowz" method="POST">
       		<fieldset>
       		<legend>Leave your contact info & I'll get back to you!</legend>
-      		<label>Name:</label>
+      		<label for="form_name">Name:</label>
           <br>
-          <input type="text" id="form_name" name="form_name" required><br>
+          <input type="text" id="form_name" name="form_name" label="Name" required><br>
 
-        	<label>Email address:</label>
+        	<label for="email_addr">Email address:</label>
           <br>
-          <input type="email" id="email_addr" name="email_addr" required><br>
+          <input type="email" id="email_addr" name="email_addr" label="Email Address" required><br>
 
-      		<label>Note to me!</label>
+      		<label for="form_note">Note to me!</label>
           <br>
-      		<input type = "text" id="form_note" name="form_message" required onchange="">
+      		<input type = "text" id="form_note" name="form_message" label="Message" required onchange="">
       		<br>
-        	<input type = "submit" class="default-button">
+        	<input type = "submit" class="default-button" value="Submit">
         </form>
       </div>
       <footer>
