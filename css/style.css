@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    height: 100%
 }
 
 body {
@@ -7,6 +8,7 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 h1 {
@@ -47,9 +49,8 @@ nav a {
   font-family: 'Noto Sans KR', sans-serif;
   color: black;
   text-decoration: none;
-  display: block;
+  /* display: block; */
   line-height: 1.5;
-  /* font-size: 40px; */
 }
 
 nav a:hover {
@@ -64,22 +65,13 @@ h2.proj-name {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-nav ul {
-  list-style-type: none;
-  justify-content: center;
-}
-
 .nav{
-  /* width: 100%; */
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
-  padding-top: 100px;
-  padding-left: none;
+  padding-top: 30px;
 }
 
 nav li {
-  display: block;
-  /* width: 100%; */
   text-align: center;
 }
 
@@ -345,6 +337,10 @@ div.desc {
   grid-row: 9 / span 1;
 }
 
+.hit-the-floor {
+  display: none;
+}
+
 /* FOR TABLET VIEW */
 /*
 
@@ -375,18 +371,17 @@ div.desc {
   }
 
   nav li {
-    display: block;
-    /* padding-right: 25px; */
+    display: inline;
+    padding-right: 25px;
   }
 
   .nav {
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 20px;
     grid-column: 3 / span 2;
     grid-row: 1 / span 1;
     text-align: center;
-    display: block;
-    /* position: relative; */
+    display: inline;
   }
 
   footer {
@@ -568,7 +563,66 @@ div.desc {
     grid-row: 9 / span 1;
   }
 
+  /* CSS generated animation */
+  .animated {
+              background-repeat: no-repeat;
+              animation-duration: 1.5s;
+              animation-fill-mode: both;
+           }
+
+   @keyframes fadeInLeft {
+      0% {
+         opacity: 0;
+         transform: translateX(-20px);
+      }
+      100% {
+         opacity: 1;
+         transform: translateX(0);
+      }
+   }
+
+   .fadeInLeft {
+   -webkit-animation-name: fadeInLeft;
+   animation-name: fadeInLeft;
+   }
+
+   #text-effect {
+     grid-column: 2 / span 2;
+     grid-row: 3 / span 1;
+   }
+
+   #effect-header {
+     font-size: 40px;
+     padding-bottom: 15px;
+   }
+
+  .hit-the-floor {
+    display: inline-block;
+    color: #0A8CBF;
+    font-size: 12em;
+    font-weight: bold;
+    font-family: Helvetica;
+    text-shadow:
+      0 1px 0 #ccc,
+      0 2px 0 #c9c9c9,
+      0 3px 0 #bbb,
+      0 4px 0 #b9b9b9,
+      0 5px 0 #aaa,
+      0 6px 1px rgba(0,0,0,.1),
+      0 0 5px rgba(0,0,0,.1),
+      0 1px 3px rgba(0,0,0,.3),
+      0 3px 5px rgba(0,0,0,.2),
+      0 5px 10px rgba(0,0,0,.25),
+      0 10px 10px rgba(0,0,0,.2),
+      0 20px 20px rgba(0,0,0,.15);
 }
+
+  .hit-the-floor {
+    text-align: center;
+  }
+
+}
+
 
 /* FOR DESKTOP VIEW */
 /*
@@ -590,11 +644,11 @@ div.desc {
 
   nav li {
     display: inline;
-    /* padding-right: 25px; */
+    padding-right: 25px;
   }
 
   .nav {
-    padding-top: 30px;
+    padding-top: 50px;
     padding-bottom: 20px;
     grid-column: 3 / span 2;
     grid-row: 1 / span 1;
@@ -711,6 +765,16 @@ div.desc {
     grid-row: 3 / span 1;
   }
 
+  #text-effect {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+  }
+
+  #effect-header {
+    font-size: 55px;
+    padding-top: 150px;
+  }
+
   #contact-area {
     grid-column: 3 / span 1;
     grid-row: 4 / span 1;
@@ -789,29 +853,6 @@ div.desc {
     grid-row: 7 / span 1;
   }
 
-  /* CSS generated animation */
-  .animated {
-              background-repeat: no-repeat;
-              animation-duration: 1.5s;
-              animation-fill-mode: both;
-           }
-
-   @keyframes fadeInLeft {
-      0% {
-         opacity: 0;
-         transform: translateX(-20px);
-      }
-      100% {
-         opacity: 1;
-         transform: translateX(0);
-      }
-   }
-
-   .fadeInLeft {
-   -webkit-animation-name: fadeInLeft;
-   animation-name: fadeInLeft;
-   }
-
   /* image gallery style */
   div #main-img-gallery {
     grid-column: 2 / span 2;
@@ -855,25 +896,6 @@ div.desc {
   }
 }
 
-/* max width for mobile view */
-/* @media screen and (min-width: 320px) and (max-width: 632px){
-  .nav{
-    width: 100%;
-  }
-
-  nav li {
-    float: none;
-    width: 100%
-  } */
-  /* nav select {
-    display: inline-block;
-  } */
-/* } */
-
-/* max width for iPad */
-/* @media (max-width: 1120px) {
-
-} */
 
 
 @media screen and (prefers-reduced-motion: reduce){
